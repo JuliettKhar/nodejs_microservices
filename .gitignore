@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+package-lock.json
+
+
+packages/gateway/node_modules/
+packages/gateway/package-lock.json
