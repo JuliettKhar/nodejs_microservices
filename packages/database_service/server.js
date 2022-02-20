@@ -2,15 +2,15 @@ import express from 'express';
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 
-import {config} from './config/index.js';
-import getRoute  from "./routes/get.js";
+import {config} from './config';
+import MailRoutes  from "./routes/MailRoutes.js";
 
 import MailSchema from "./dbUtils/Models/Mail.js";
 
 export const app = express();
 app
     .use(bodyParser.json())
-    .use('/', getRoute)
+    .use('/', MailRoutes)
 
 async function start() {
   try {
