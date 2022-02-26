@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 
-import {config} from './config';
+import {config} from './config/index.js';
 import MailRoutes  from "./routes/MailRoutes.js";
 
 import MailSchema from "./dbUtils/Models/Mail.js";
@@ -17,7 +17,7 @@ async function start() {
     await mongoose.connect(config.uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-    });
+    }, () => {});
 
     app.listen(config.port, () => {
         console.info(`🚀 database server is started at http://localhost:${config.port}`);

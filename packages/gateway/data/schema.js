@@ -3,11 +3,17 @@ import {resolvers} from "./resolvers.js";
 
 const typeDefs = `
     type Query { 
-        mails: [Mail]
-        mail(subject: String!, receiver: String!): Mail 
+        mails: Mails
+        mail(id: String!): MailById 
     }
     type Mutation {
-       mail(subject: String!, receiver: String!, content: String!): Mail  
+       mail(subject: String!, receiver: String!, content: String!): MailById  
+    }
+    type Mails {
+        data: [Mail]
+    }
+    type MailById {
+        data: Mail
     }
     type Mail {
        subject: String! 

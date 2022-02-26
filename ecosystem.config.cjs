@@ -5,7 +5,8 @@ module.exports = {
     apps: [
         {
             name: 'Gateway',
-            script: `./packages/gateway/server.js`,
+            script: "./server.js",
+            cwd: "./packages/gateway",
             watch: true,
             env: {
                 PORT: 3001,
@@ -15,7 +16,8 @@ module.exports = {
         },
         {
             name: 'DB Service',
-            script: `./packages/database_service/server.js`,
+            script: "./server.js",
+            cwd: "./packages/database_service",
             watch: true,
             env: {
                 PORT: 4001,
