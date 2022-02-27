@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { config } from "../config/index.js";
+import { pushToMessageQ } from "../amqp/connect.js";
 
 const { serviceDatabase: { port, host }} = config;
 
@@ -21,12 +22,19 @@ const getSingleMail = async (id) => {
 }
 
 const postSingleMail = async (payload) => {
+    let result;
+    let err;
+
     try {
         const {data} = await axios.post(`${host}:${port}/mails`, payload)
-        return data
+        result = data;
     } catch (e) {
-        console.log(e)
+        err = e;
     }
+
+    pushToMessageQ(JSON.stringify(payload))
+
+    return result || err;
 }
 
 export const resolvers = {
