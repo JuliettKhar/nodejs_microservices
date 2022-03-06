@@ -25,6 +25,18 @@ module.exports = {
                 NODE_ENV: "development"
             },
         },
+        {
+            name: 'Mailing Service',
+            script: "./index.js",
+            cwd: "./packages/mailing_service",
+            watch: true,
+            env: {
+                Q_URI: 'amqps://xfjfwzwu:5QoJv9I-q1qF-EwHotgr6JAXgxsLDTil@roedeer.rmq.cloudamqp.com/xfjfwzwu',
+                NODE_ENV: "development",
+                MJ_API_SECRET: 'dd10b47de8c3c84b05714337a17b4152',
+                MJ_API_PUBLIC: '90d517a540c36a91dca4e5b7967ecd64'
+            },
+        },
     ],
 
     // deploy : {
