@@ -11,7 +11,7 @@ Mailjet,
 GraphQl
 
 ```
-git pull
+git clone
 ```
 ```
 npm i
