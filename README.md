@@ -1,8 +1,8 @@
 # nodejs-microservices-starter
 
-Database service
-Gataway service
-Mail service
+- Database service
+- Gataway service
+- Mail service
 
 Node.js,
 Express, 
