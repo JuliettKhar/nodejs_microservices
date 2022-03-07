@@ -1,5 +1,4 @@
 const { Q_URI, MJ_API_SECRET, MJ_API_PUBLIC } = process.env;
-console.log(process.env.Q_URI, process.env.MJ_API_SECRET)
 
 export default {
     ampq: {

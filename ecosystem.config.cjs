@@ -1,5 +1,6 @@
-const path = require('path');
-const basePath = path.join(__dirname, '/packages');
+// https://pm2.keymetrics.io/docs/usage/application-declaration/
+// https://www.cloudamqp.com/blog/part1-rabbitmq-for-beginners-what-is-rabbitmq.html
+// https://app.mailjet.com/campaigns
 
 module.exports = {
     apps: [

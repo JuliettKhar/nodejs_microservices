@@ -23,7 +23,6 @@ export default function setConsume () {
                 try {
                  mail = JSON.parse(msg.content.toString());
                 } catch (e) {
-                    console.log(e)
                     mail = msg
                 }
 
